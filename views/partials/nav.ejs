@@ -1,0 +1,35 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" href="/">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/squad">Squad</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/stadium">Stadium</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/users">Users</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/work">Work</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/about">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/contact">Contact</a>
+  </li>
+<% if(!currentUser) {%>
+  <li class="nav-item">
+<a class="nav-link" href="/users/login">Login</a>
+  </li>
+  <li class="nav-item">
+<a class="nav-link" href="/users/register">Register</a>
+<% } else {%>
+  </li>
+  <li class="nav-item">
+<a class="nav-link" href="/users/logout">Logout</a>
+<% } %>
+  </li>
+</ul>
