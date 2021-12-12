@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+	<%- include('partials/head'); %>
+  </head>
+  <body>
+	<div class="container">
+	<header>
+    <%- include('partials/nav'); %>
+	</header>
+    <h1><%= title %></h1>
+    <div>
+      <ul>
+        <li>
+          <p>
+          <a href="/about/contentmap">
+            Content Map
+          </a>
+          - The Content Map Link can be accessed from the About page right below the video and audio example. 
+          The link will lead to the Content Map Page (or use this link).
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="/about/wireframe">
+            Wireframe
+          </a>
+          - The Wireframe link can be accessed from the About page right below the video and audio example. 
+          The link will lead to the Wireframe Page (or use this link). Wireframes can be viewed there.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="#">
+            Top Level Sections
+          </a>
+          - Can be viewed on any page. Is contatined in a nav partial.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="#">
+            Favicon
+          </a>
+          - Can be viewed on any page. Look to the tab on the web browser to view the Under Radar logo.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="#">
+            CSS icons
+          </a>
+          - Can be viewed on any page. Look to the footer and each of the main four pages will have an icon.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="/about">
+            Video Element
+          </a>
+          - On the about page. Very slow loading, shows on the left side of the page. The video is a brief snippet of the iOS app.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="/about">
+            Audio Element
+          </a>
+          - On the about page. Very slow loading, shows on the left side of the page below the video. The audio is just a sample wave noise pulled from a free download source.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="#">
+            Web Font
+          </a>
+          - Can be viewed on any page. Imported in style.css
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="/users/register">
+            Canvas
+          </a>
+          - On the register page. User can write there signature (though it doesn't store with registration).
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="/contact">
+            SVG
+          </a>
+          - On the contact page. Acts as a "logo" for now, would change to a baseball image in future.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="/users/login">
+            Form Input
+          </a>
+          - On the login/register pages. Forms are submitted to login/register user.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="#">
+            JSON
+          </a>
+          - Done in app.js. Imported a snippet of the Under Radar database which is printed when the app is started with npm start.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="#">
+            Footer
+          </a>
+          - Can be viewed on every page. At the bottom, links can be used to navigate throughout the app.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="#">
+            Server Storage
+          </a>
+          - Provided by Mongodb. Stores users when registered and authorizes them when they login/logout.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="/users/secret">
+            Authentication
+          </a>
+          - Authenticated user will be able to view the secret page.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="#">
+            Authorization
+          </a>
+          - Provided by Mongodb. Can tell by the change in viewing login/register or logout page.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="#">
+            Sessions
+          </a>
+          - Done in app.js. Cookies set to expire in one week.
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="/about/credits">
+            Credits
+          </a>
+          - Can be found on about page. Under video and audio element. Link goes to credits 
+          page containing all external resources. (Can also access from this link)
+        </p>
+        </li>
+        <li>
+          <p>
+          <a href="#">
+            Walkthrough
+          </a>
+          - Congrats you are looking at it!
+        </p>
+        </li>
+      </ul>
+    </div>
+	<footer>
+    <%- include('partials/footer'); %>
+	</footer>
+	</div>
+  </body>
+</html>

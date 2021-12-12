@@ -10,18 +10,25 @@
     <%- include('partials/nav'); %>
 	</header>
     <h1><%= title %></h1>
-    <h2>Welcome to <%= title %></h2>
-    <%- include('partials/carousel'); %>
 	<div class="card">
     <div class="card-body">
-      <h5 class="card-title">This is <%= title %></h5>
+      <video width="300" height="600" controls> 
+        <source src="/images/Recording.mp4" type="video/mp4" >
+        Your browser does not support
+      </video> </br>
+      <audio controls>
+        <source src="/images/Audio-Example.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+      <a class="nav-link" href="/about/credits">Credits</a>
+      <a class="nav-link" href="/about/contentmap">Content Map</a>
+      <a class="nav-link" href="/users/secret">Secret</a>
+      <a class="nav-link" href="/about/walkthrough">Walkthrough</a>
+      <a class="nav-link" href="/about/wireframe">Wireframe</a>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
 	</div>
-  <video width="300" height="600" controls>
-    <source src="/images/SampleUnderRadar.mp4" type="video/mp4" />
-    Your browser does not support
-  </video> 
+
 	<footer>
     <%- include('partials/footer'); %>
 	</footer>

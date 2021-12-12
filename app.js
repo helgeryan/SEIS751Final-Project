@@ -43,10 +43,10 @@ const sessionConfig = {
 
 const fs = require('fs');
 
-fs.readFile('./public/en.clubs.json', (err, data) => {
+fs.readFile('./public/UnderRadar.json', (err, data) => {
     if (err) throw err;
-    let club = JSON.parse(data);
-    console.log(club);
+    let underRadar = JSON.parse(data);
+    console.log(underRadar);
 });
 
 var app = express();

@@ -3,6 +3,12 @@ var router = express.Router();
 const passport = require('passport');
 const User = require('../models/user');
 
+
+checkAuthenticated = (req, res, next) => {
+    if (req.isAuthenticated()) { return next() }
+    res.redirect("/users/login")
+}  
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.render('users', { title: 'LFC Fan Page' });
@@ -19,10 +25,10 @@ router.post('/register', async (req, res, next) => {
         const registeredUser = await User.register(user, password);
         req.login(registeredUser, err => {
             if (err) return next(err);
-            res.redirect('/stadium');
+            res.redirect('/about');
         })
     } catch (e) {
-        res.redirect('/register');
+        res.redirect('/users/register');
     }
 });
 
@@ -30,7 +36,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 })
 
-router.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), (req, res) => {
+router.post('/login', passport.authenticate('local', { failureRedirect: '/users/login' }), (req, res) => {
     const redirectUrl = req.session.returnTo || '/';
     delete req.session.returnTo;
     res.redirect(redirectUrl);
@@ -38,10 +44,10 @@ router.post('/login', passport.authenticate('local', { failureRedirect: '/login'
 
 router.get('/logout', (req, res) => {
     req.logout();
-    res.redirect('/stadium');
+    res.redirect('/about');
 })
 
-router.get('/secret', (req, res) => {
+router.get('/secret', checkAuthenticated, (req, res) => {
   res.render('secret');
 })
 
